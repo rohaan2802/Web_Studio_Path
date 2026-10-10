@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="StudioPath Pro — full-stack front-end practice product: semantic HTML, flex/grid, media queries, hover effects, keyframes, tables, iframe media, forms, DOM tools, estimator, and local task planner."
+    />
+    <title>StudioPath Pro — Practice-powered studio platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css?v=22" />
+    <link rel="icon" href="assets/images/icon.png" type="image/png" />
+    <script src="js/theme-init.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <div class="ticker" aria-label="Studio announcements">
+      <div class="ticker-track">
+        <span>Semantic HTML · Flex navigation · CSS Grid galleries · Media queries · Hover overlays · Keyframes · Tables · iframe media · Validated forms · DOM planner · Quote estimator · Theme persistence</span>
+        <span>Semantic HTML · Flex navigation · CSS Grid galleries · Media queries · Hover overlays · Keyframes · Tables · iframe media · Validated forms · DOM planner · Quote estimator · Theme persistence</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home" aria-label="StudioPath Pro home">
+          <img src="assets/images/logo.png" width="36" height="36" alt="" />
+          <span>StudioPath <em>Pro</em></span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+          <span class="sr-only">Menu</span><span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#labs">Labs</a>
+          <a href="#estimate">Estimate</a>
+          <a href="#planner">Planner</a>
+          <a href="#contact">Contact</a>
+          <a href="about.html">About</a>
+          <button class="theme-toggle" id="themeToggle" type="button">Dark theme</button>
+          <button class="demo-nav-btn" id="demoToggle" type="button" aria-expanded="false" aria-controls="demoDock">
+            Demo tools
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/images/hero.jpg" alt="" width="1600" height="900" />
+        </div>
+        <div class="wrap hero-copy">
+          <p class="hero-kicker">
+            <span class="hero-kicker-from">Web_Practice</span>
+            <span class="hero-kicker-arrow" aria-hidden="true">→</span>
+            <span class="hero-kicker-to">production-shaped product</span>
+          </p>
+          <h1 id="hero-title">Every lab concept,<br />one professional studio platform.</h1>
+          <p class="lede">
+            StudioPath Pro folds the repository’s HTML, CSS, and JavaScript
+            assignments into a useful multi-section site: portfolio filters with
+            hover states, schedule tables, embedded media, a quote estimator,
+            a DOM playground, validated intake, and a persistent task planner.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#cases">See client cases</a>
+            <a class="button button-ghost" href="#estimate">Run an estimate</a>
+            <a class="text-link" href="#contact">Book a discovery call →</a>
+          </div>
+          <dl class="hero-facts" id="heroStats">
+            <div><dt>Lab modules</dt><dd data-count="18">0</dd></div>
+            <div><dt>Live sections</dt><dd data-count="14">0</dd></div>
+            <div><dt>Breakpoints</dt><dd data-count="5">0</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section wrap" id="trust" aria-labelledby="trust-title">
+        <div class="section-heading">
+          <p class="eyebrow">Built for client demos</p>
+          <h2 id="trust-title">What stakeholders can click in the room.</h2>
+          <p>
+            Every module below is interactive on a static host — ideal for
+            discovery calls, classroom defense, and portfolio walkthroughs
+            without a backend.
+          </p>
+        </div>
+        <div class="trust-strip" role="list">
+          <article class="trust-item" role="listitem"><strong>01</strong><span>Live filters &amp; lightbox</span></article>
+          <article class="trust-item" role="listitem"><strong>02</strong><span>Transparent estimate math</span></article>
+          <article class="trust-item" role="listitem"><strong>03</strong><span>Form validation you can break</span></article>
+          <article class="trust-item" role="listitem"><strong>04</strong><span>Planner persists after refresh</span></article>
+          <article class="trust-item" role="listitem"><strong>05</strong><span>Light theme max-contrast ready</span></article>
+          <article class="trust-item" role="listitem"><strong>06</strong><span>Printable leave-behind styles</span></article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="cases" aria-labelledby="cases-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Case snapshots</p>
+            <h2 id="cases-title">How a walkthrough usually lands.</h2>
+            <p>Short narratives you can narrate while clicking the matching section.</p>
+          </div>
+          <div class="cases-grid">
+            <article class="case-card">
+              <p class="eyebrow">Retail landing</p>
+              <h3>Launch page in one sprint</h3>
+              <p>Hero → services → filtered work → intake. Show the schedule table as the delivery calendar.</p>
+              <a class="text-link" href="#schedule">Jump to schedule →</a>
+            </article>
+            <article class="case-card">
+              <p class="eyebrow">Agency toolkit</p>
+              <h3>Scope before you quote</h3>
+              <p>Use the estimator on a projector, then seed the planner with agreed milestones live.</p>
+              <a class="text-link" href="#estimate">Jump to estimator →</a>
+            </article>
+            <article class="case-card">
+              <p class="eyebrow">Classroom defense</p>
+              <h3>Prove every lab concept</h3>
+              <p>Open the skills map and DOM lab to show selectors, class toggles, and table markup under scrutiny.</p>
+              <a class="text-link" href="#skills">Jump to coverage →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">Service system</p>
+          <h2 id="services-title">Built like Acme + WebPaint — finished like a product.</h2>
+          <p>Six offerings map to layout, interaction, and form skills from the original coursework folders.</p>
+        </div>
+        <div class="service-grid service-grid-6">
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">01</span><h3>Landing systems</h3><p>Hero bands, sticky flex nav, skip links, and ticker announcements.</p></article>
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">02</span><h3>Responsive grids</h3><p>CSS Grid galleries and media-query stacks from phone to ultrawide.</p></article>
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">03</span><h3>Motion &amp; hover</h3><p>Keyframe accents and ::before/::after overlays on portfolio cards.</p></article>
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">04</span><h3>Data tables</h3><p>Schedule and pricing tables with nested headers for clear comparison.</p></article>
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">05</span><h3>Forms that check</h3><p>Newsletter + intake validation with password match and status regions.</p></article>
+          <article class="card hover-lift"><span class="card-icon" aria-hidden="true">06</span><h3>DOM tooling</h3><p>Estimator, planner, and live lab panel driven by vanilla JavaScript.</p></article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="process" aria-labelledby="process-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Delivery path</p>
+            <h2 id="process-title">A clear process, animated with purpose.</h2>
+          </div>
+          <ol class="process-rail">
+            <li class="process-step">
+              <span class="process-num">01</span>
+              <strong>Discover</strong>
+              <p>Brief intake and scope checklist from the form labs.</p>
+            </li>
+            <li class="process-step">
+              <span class="process-num">02</span>
+              <strong>Structure</strong>
+              <p>Semantic sections, tables, and media blocks locked early.</p>
+            </li>
+            <li class="process-step">
+              <span class="process-num">03</span>
+              <strong>Style</strong>
+              <p>Flex/Grid layouts, themes, hover, and keyframe polish.</p>
+            </li>
+            <li class="process-step">
+              <span class="process-num">04</span>
+              <strong>Script</strong>
+              <p>Filters, estimators, planner persistence, DOM demos.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Portfolio</p>
+            <h2 id="work-title">Filtered studies with hover detail.</h2>
+            <p>WebPaint-style chips plus CSS hover overlays and a keyboard-friendly lightbox (positions + DOM).</p>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Portfolio filters">
+            <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter="brand" aria-pressed="false">Brand</button>
+            <button type="button" class="chip" data-filter="ui" aria-pressed="false">UI</button>
+            <button type="button" class="chip" data-filter="motion" aria-pressed="false">Motion</button>
+            <button type="button" class="chip" data-filter="tools" aria-pressed="false">Tools</button>
+          </div>
+          <p class="filter-status" id="filterStatus" role="status" aria-live="polite">Showing all 8 projects</p>
+          <div class="work-grid work-grid-4" id="workGrid">
+            <figure class="work-card" data-category="brand"><a class="work-preview" href="assets/images/work-1.jpg" data-lightbox data-caption="Color system"><img src="assets/images/work-1.jpg" alt="Color palette book and tablet on desk" loading="lazy" width="1200" height="750" /></a><figcaption><span>01</span><strong>Color system</strong><em>Brand</em></figcaption></figure>
+            <figure class="work-card" data-category="ui"><a class="work-preview" href="assets/images/work-2.jpg" data-lightbox data-caption="Wireframe board"><img src="assets/images/work-2.jpg" alt="Sticky notes and wireframe planning board" loading="lazy" width="1200" height="750" /></a><figcaption><span>02</span><strong>Wireframe board</strong><em>UI</em></figcaption></figure>
+            <figure class="work-card" data-category="motion"><a class="work-preview" href="assets/images/work-3.jpg" data-lightbox data-caption="UI kit screen"><img src="assets/images/work-3.jpg" alt="Desktop monitor showing UI component kit" loading="lazy" width="1200" height="750" /></a><figcaption><span>03</span><strong>UI kit screen</strong><em>Motion</em></figcaption></figure>
+            <figure class="work-card" data-category="tools"><a class="work-preview" href="assets/images/work-4.jpg" data-lightbox data-caption="Maker toolkit"><img src="assets/images/work-4.jpg" alt="Art and maker tools flat lay" loading="lazy" width="1200" height="750" /></a><figcaption><span>04</span><strong>Maker toolkit</strong><em>Tools</em></figcaption></figure>
+            <figure class="work-card" data-category="tools"><a class="work-preview" href="assets/images/work-5.jpg" data-lightbox data-caption="Studio desk"><img src="assets/images/work-5.jpg" alt="Bright studio office desks" loading="lazy" width="1200" height="750" /></a><figcaption><span>05</span><strong>Studio desk</strong><em>Tools</em></figcaption></figure>
+            <figure class="work-card" data-category="ui"><a class="work-preview" href="assets/images/work-6.jpg" data-lightbox data-caption="Focus session"><img src="assets/images/work-6.jpg" alt="Person coding on laptop at wooden desk" loading="lazy" width="1200" height="750" /></a><figcaption><span>06</span><strong>Focus session</strong><em>UI</em></figcaption></figure>
+            <figure class="work-card" data-category="brand"><a class="work-preview" href="assets/images/work-7.jpg" data-lightbox data-caption="Code &amp; craft"><img src="assets/images/work-7.jpg" alt="Laptop showing code on wooden desk" loading="lazy" width="1200" height="750" /></a><figcaption><span>07</span><strong>Code &amp; craft</strong><em>Brand</em></figcaption></figure>
+            <figure class="work-card" data-category="motion"><a class="work-preview" href="assets/images/work-8.jpg" data-lightbox data-caption="Collab table"><img src="assets/images/work-8.jpg" alt="Top-down shared workspace with laptops" loading="lazy" width="1200" height="750" /></a><figcaption><span>08</span><strong>Collab table</strong><em>Motion</em></figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="media" aria-labelledby="media-title">
+        <div class="wrap media-grid">
+          <div class="section-heading">
+            <p class="eyebrow">HTML media lab</p>
+            <h2 id="media-title">Embedded reference reel.</h2>
+            <p>Assignment 02 iframe practice — a public web-design talk for context (external embed).</p>
+          </div>
+          <div class="media-frame">
+            <iframe
+              title="Web design talk on YouTube"
+              src="https://www.youtube-nocookie.com/embed/B-ytMSuwbf8"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="schedule" aria-labelledby="schedule-title">
+        <div class="section-heading">
+          <p class="eyebrow">Tables lab</p>
+          <h2 id="schedule-title">Build week schedule.</h2>
+          <p>Seminar-style table from the HTML table exercises — useful for sprint planning.</p>
+        </div>
+        <div class="skills-table-wrap" tabindex="0">
+          <table class="skills-table">
+            <caption class="sr-only">Weekly build schedule</caption>
+            <thead>
+              <tr>
+                <th scope="col">Block</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">09:00</th><td colspan="2">Discovery workshop</td><td>Wireframes</td><td>UI kit</td><td>QA pass</td></tr>
+              <tr><th scope="row">13:00</th><td>Content map</td><td>Flex / Grid</td><td colspan="2">Interaction scripts</td><td>Deploy</td></tr>
+              <tr><th scope="row">16:00</th><td>Form schema</td><td>Hover states</td><td>Estimator</td><td>Planner</td><td>Docs</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="pricing" aria-labelledby="pricing-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Nested comparison</p>
+            <h2 id="pricing-title">Packages you can actually explain.</h2>
+          </div>
+          <div class="skills-table-wrap" tabindex="0">
+            <table class="skills-table pricing-table">
+              <caption class="sr-only">Pricing packages</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Starter</th>
+                  <th scope="col">Studio</th>
+                  <th scope="col">Launch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Landing sections</th><td>5</td><td>10</td><td>14+</td></tr>
+                <tr><th scope="row">Responsive pass</th><td>Phone + desktop</td><td>Full matrix</td><td>Full + landscape QA</td></tr>
+                <tr><th scope="row">Interactive widgets</th><td>—</td><td>Planner</td><td>Planner + estimator + labs</td></tr>
+                <tr><th scope="row">Delivery</th><td colspan="3">Static GitHub Pages bundle</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="estimate" aria-labelledby="estimate-title">
+        <div class="estimate-grid">
+          <div class="section-heading">
+            <p class="eyebrow">JavaScript labs · functions · objects · conditionals</p>
+            <h2 id="estimate-title">Project quote estimator.</h2>
+            <p>Pick scope options; a pure JS calculator (no libraries) totals hours and a ballpark fee using arrays, objects, and if/else rules.</p>
+          </div>
+          <form class="estimate-panel" id="estimateForm">
+            <label for="estPages">Pages / sections
+              <select id="estPages" name="estPages">
+                <option value="5">5 sections — base 18h / $320</option>
+                <option value="10" selected>10 sections — base 28h / $480</option>
+                <option value="14">14+ sections — base 40h / $650</option>
+              </select>
+            </label>
+            <fieldset>
+              <legend>Add-ons</legend>
+              <label class="inline"><input type="checkbox" name="addon" value="filters" checked /> Portfolio filters (+6h / +$90)</label>
+              <label class="inline"><input type="checkbox" name="addon" value="planner" checked /> Task planner (+8h / +$120)</label>
+              <label class="inline"><input type="checkbox" name="addon" value="video" /> Media embed (+3h / +$45)</label>
+              <label class="inline"><input type="checkbox" name="addon" value="studio" /> Multi-page about (+5h / +$75)</label>
+            </fieldset>
+            <label for="estUrgency">Urgency
+              <select id="estUrgency" name="estUrgency">
+                <option value="1">Standard — ×1.0</option>
+                <option value="1.25">Faster — ×1.25</option>
+                <option value="1.5">Rush — ×1.5</option>
+              </select>
+            </label>
+            <p class="estimate-live-hint" id="estimateHint">
+              Pick options, then click <strong>Calculate</strong> — formula: (base + add-ons) × urgency.
+            </p>
+            <div class="estimate-actions">
+              <button class="button" type="button" id="calcEstimate">Calculate</button>
+              <button class="button button-ghost" type="button" id="resetEstimate">Reset</button>
+              <button class="button button-ghost" type="button" id="copyEstimateInline">Copy summary</button>
+            </div>
+            <div class="estimate-result" id="estimateResult" role="status" aria-live="polite">
+              Choose options, then click <strong>Calculate</strong> to see hours, fee, and breakdown.
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="team" aria-labelledby="team-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">People &amp; mascots</p>
+            <h2 id="team-title">The faces behind the build.</h2>
+            <p>Sample portraits use male teammates and animal mascots — no female imagery in the product or README captures.</p>
+          </div>
+          <div class="team-grid">
+            <article class="person"><img src="assets/images/team-1.jpg" alt="Adam Rivers" width="400" height="400" loading="lazy" /><h3>Adam Rivers</h3><p class="role">Product lead</p><p>Owns structure, content mapping, and release checklist.</p></article>
+            <article class="person"><img src="assets/images/team-2.jpg" alt="Noah Blake" width="400" height="400" loading="lazy" /><h3>Noah Blake</h3><p class="role">Front-end engineer</p><p>Flex/Grid systems, themes, and interaction scripts.</p></article>
+            <article class="person"><img src="assets/images/team-3.jpg" alt="Pixel the cat mascot" width="400" height="400" loading="lazy" /><h3>Pixel</h3><p class="role">Mascot · QA napper</p><p>Approves contrast naps and hover-state playfulness.</p></article>
+            <article class="person"><img src="assets/images/team-4.jpg" alt="Byte the dog mascot" width="400" height="400" loading="lazy" /><h3>Byte</h3><p class="role">Mascot · fetch tester</p><p>Stress-tests buttons with boundless enthusiasm.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quote-section" id="quote" aria-labelledby="quote-title">
+        <div class="wrap quote-grid">
+          <img src="assets/images/quote.jpg" alt="Man with coffee reviewing work on a laptop" width="1200" height="675" loading="lazy" />
+          <div>
+            <p class="eyebrow" id="quote-title">Field note</p>
+            <blockquote>“Turning practice folders into one shippable site is the difference between a lab grade and a portfolio URL.”</blockquote>
+            <p>Marcus Hale <span>· Studio advisor</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Concept coverage</p>
+          <h2 id="skills-title">Checklist of labs represented here.</h2>
+        </div>
+        <div class="list-columns">
+          <div>
+            <h3>HTML</h3>
+            <ol type="I">
+              <li>Semantic landmarks &amp; skip link</li>
+              <li>Nested lists (this checklist)</li>
+              <li>Tables + colspan schedule</li>
+              <li>Forms, radios, selects, textarea</li>
+              <li>iframe media embed</li>
+            </ol>
+          </div>
+          <div>
+            <h3>CSS</h3>
+            <ul>
+              <li>Flex header / action rows</li>
+              <li>Grid services &amp; work</li>
+              <li>@media breakpoint matrix</li>
+              <li>::before/::after hover overlays</li>
+              <li>Keyframes ticker + process pulse</li>
+              <li>Pseudo-class chip/button states</li>
+            </ul>
+          </div>
+          <div>
+            <h3>JavaScript</h3>
+            <ul>
+              <li>DOM create/update/remove (planner)</li>
+              <li>Arrays / objects / conditionals (estimator)</li>
+              <li>Loops for counters &amp; filters</li>
+              <li>Events, localStorage, aria-live</li>
+              <li>Live lab panel class toggles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-table-wrap" tabindex="0" style="margin-top:1.5rem">
+          <table class="skills-table">
+            <caption class="sr-only">Practice to product map</caption>
+            <thead><tr><th>Practice source</th><th>Concept</th><th>In StudioPath Pro</th></tr></thead>
+            <tbody>
+              <tr><td>Assignment 01</td><td>Multi-page + footer</td><td>about.html + product footer</td></tr>
+              <tr><td>Assignment 02</td><td>Marquee, lists, iframe, tables, forms</td><td>Ticker, checklists, media, schedule, intake</td></tr>
+              <tr><td>Assignment 03</td><td>Acme marketing site</td><td>Hero, services, newsletter</td></tr>
+              <tr><td>Assignment 04</td><td>WebPaint filters</td><td>Work chips + lightbox</td></tr>
+              <tr><td>Assignment 06–07</td><td>Landing CSS + form chrome</td><td>Section system + validated contact</td></tr>
+              <tr><td>CSS Flex/Grid/@Media</td><td>Layout systems</td><td>Header, grids, breakpoints</td></tr>
+              <tr><td>CSS Hover/keyframes/pseudo</td><td>Interaction polish</td><td>Overlays, ticker, process rail</td></tr>
+              <tr><td>Java S DOM/Todo/Functions</td><td>Scripting</td><td>Planner, estimator, lab panel</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section-band" id="newsletter" aria-labelledby="news-title">
+        <div class="wrap newsletter">
+          <div>
+            <p class="eyebrow">Acme-style subscribe</p>
+            <h2 id="news-title">Studio notes, no spam backend.</h2>
+            <p>Client-side email check only — demonstrates form validity messaging.</p>
+          </div>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <label class="newsletter-label" for="newsEmail">Work email</label>
+            <div class="newsletter-row">
+              <input
+                id="newsEmail"
+                class="email-field"
+                name="newsEmail"
+                type="text"
+                inputmode="email"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="you@company.com"
+                pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                required
+              />
+              <button class="button" type="submit">Subscribe</button>
+            </div>
+            <p class="form-status" id="newsStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section wrap" id="labs" aria-labelledby="labs-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive DOM lab</p>
+          <h2 id="labs-title">Play with selectors &amp; class toggles.</h2>
+          <p>Mirrors the Java S DOM exercises: query nodes, toggle classes, and rewrite text live.</p>
+        </div>
+        <div class="lab-panel">
+          <div class="lab-stage" id="labStage">
+            <p id="labText">Target panel — change my style or copy.</p>
+          </div>
+          <div class="lab-controls">
+            <button type="button" class="chip" id="labAccent">Toggle accent</button>
+            <button type="button" class="chip" id="labShake">Pulse once</button>
+            <button type="button" class="chip" id="labRewrite">Rewrite text</button>
+            <button type="button" class="chip" id="labReset">Reset</button>
+            <p class="filter-status" id="labStatus" role="status">Ready.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="planner" aria-labelledby="planner-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">TodoList lab → useful planner</p>
+            <h2 id="planner-title">Brief planner with priority filters.</h2>
+          </div>
+          <div class="planner">
+            <form class="planner-form" id="taskForm">
+              <label>Task<input id="taskTitle" type="text" maxlength="80" placeholder="Add lightbox captions" required /></label>
+              <label>Priority
+                <select id="taskPriority"><option value="high">High</option><option value="low" selected>Low</option></select>
+              </label>
+              <button class="button" type="submit">Add task</button>
+            </form>
+            <div class="planner-toolbar">
+              <label>Search<input id="taskSearch" type="search" placeholder="Filter tasks…" /></label>
+              <label>Show
+                <select id="taskFilter">
+                  <option value="all">All</option>
+                  <option value="open">Open</option>
+                  <option value="done">Done</option>
+                  <option value="high">High priority</option>
+                </select>
+              </label>
+              <button type="button" class="chip" id="clearDone">Clear done</button>
+              <button type="button" class="chip chip-accent" id="seedDemoInline">Seed demo data</button>
+              <p class="planner-counts" id="taskCounts">0 open · 0 done</p>
+            </div>
+            <ul class="task-list" id="taskList" aria-label="Tasks"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-grid">
+          <div class="section-heading">
+            <p class="eyebrow">Assignment 07 → working intake</p>
+            <h2 id="contact-title">Project brief form.</h2>
+            <p>Name, email, channel, type, password match, licence-style checkbox, and notes — validated in-browser.</p>
+            <ul class="contact-points">
+              <li>Required fields fail loudly with status text.</li>
+              <li>Password pair must match (demo account pattern).</li>
+              <li>Nothing is uploaded to a server.</li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <label>Full name<input id="cName" type="text" autocomplete="name" placeholder="e.g. Alex Khan" required /></label>
+            <fieldset>
+              <legend>Preferred contact</legend>
+              <label class="inline"><input type="radio" name="channel" value="email" checked /> Email</label>
+              <label class="inline"><input type="radio" name="channel" value="phone" /> Phone</label>
+            </fieldset>
+            <label
+              ><span id="cContactLabel">Email</span
+              ><input
+                id="cContact"
+                class="email-field contact-channel-field"
+                type="text"
+                inputmode="email"
+                autocomplete="email"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="name@company.com"
+                pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                required
+            /></label>
+            <label>Project type
+              <select id="cType" required>
+                <option value="" selected disabled>Choose one</option>
+                <option value="landing">Landing page</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="platform">StudioPath-style platform</option>
+              </select>
+            </label>
+            <label>Demo password<input id="cPass" type="password" minlength="6" autocomplete="new-password" placeholder="At least 6 characters" required /></label>
+            <label>Confirm password<input id="cPass2" type="password" minlength="6" autocomplete="new-password" placeholder="Re-enter password" required /></label>
+            <label>Notes<textarea id="cNotes" rows="4" placeholder="Goals, deadline, references…"></textarea></label>
+            <label class="inline"><input id="cTerms" type="checkbox" required /> I agree this is a demo form with no live backend.</label>
+            <button class="button" type="submit">Send brief</button>
+            <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section wrap" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Context</p>
+          <h2 id="faq-title">Details worth reading.</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Are the old assignment folders still in the repo?</summary>
+            <p>No. Practice archives were removed so the repository ships only StudioPath Pro — the live GitHub Pages product.</p>
+          </details>
+          <details>
+            <summary>Why male / animal imagery only?</summary>
+            <p>Product and README screenshots intentionally avoid female photos or backgrounds for this portfolio presentation.</p>
+          </details>
+          <details>
+            <summary>Is the estimator a real invoice?</summary>
+            <p>No — it demonstrates functions, objects, and conditionals with transparent demo math only.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="#home"><img src="assets/images/logo.png" width="32" height="32" alt="" /><span>StudioPath Pro</span></a>
+          <p>Mohammad Rohaan · 22I-2327 — practice labs unified into a GitHub Pages product.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="#work">Work</a>
+          <a href="#estimate">Estimate</a>
+          <a href="#planner">Planner</a>
+          <a href="about.html">About</a>
+        </div>
+        <div>
+          <h3>Repository</h3>
+          <a href="https://github.com/rohaan2802/Web_Practice">Source on GitHub</a>
+          <a href="https://github.com/rohaan2802/Web_Practice#live-demo">README live demo</a>
+          <button type="button" class="footer-top-btn" id="footerToTop">Back to top</button>
+        </div>
+      </div>
+      <p class="footer-meta wrap">© <span id="year"></span> Mohammad Rohaan · StudioPath Pro</p>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <button type="button" class="lightbox-close" id="lightboxClose">Close</button>
+      <img id="lightboxImage" alt="" />
+      <p id="lightboxCaption"></p>
+    </dialog>
+
+    <aside class="demo-dock" id="demoDock" role="region" aria-label="Client demo toolkit" aria-hidden="false">
+      <div class="demo-dock-head">
+        <div>
+          <p class="demo-dock-eyebrow">Client walkthrough</p>
+          <h2 class="demo-dock-title" id="demoDockTitle">Demo toolkit</h2>
+        </div>
+        <button type="button" class="demo-dock-hide" id="dismissDemo" aria-label="Hide demo toolkit">Hide</button>
+      </div>
+      <p class="demo-dock-copy">
+        Seed planner milestones, copy the last estimate, or jump to intake.
+        Press <kbd>D</kbd> anytime to reseed. Hide anytime — reopen from
+        <strong>Demo tools</strong> in the header.
+      </p>
+      <div class="demo-actions">
+        <button type="button" class="chip chip-accent" id="seedDemo">Seed demo data</button>
+        <button type="button" class="chip" id="copyEstimate">Copy last estimate</button>
+        <a class="chip chip-link" href="#contact">Open intake</a>
+        <a class="chip chip-link" href="#estimate">Open estimator</a>
+      </div>
+    </aside>
+
+    <button
+      type="button"
+      class="demo-restore is-hidden"
+      id="demoRestore"
+      aria-controls="demoDock"
+      aria-expanded="false"
+      hidden
+    >
+      Show demo tools
+    </button>
+
+    <a class="float-cta" href="#contact">Book demo</a>
+    <button class="to-top" id="toTop" type="button" hidden aria-label="Back to top">↑ Top</button>
+    <div class="copy-toast" id="copyToast" role="status" aria-live="polite" hidden>Copied!</div>
+    <script src="js/app.js?v=11" defer></script>
+  </body>
+</html>
